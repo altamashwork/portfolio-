@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container"></div>
+    <nav>
+        <img src="IMG/logo.png" class="logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-text">
+        <p>FULL-STACK DEVELOPER</p>
+        <h1>Hey, I'am Altamash<br><span>Kamal</span></h1>
+    </div>
+</div>
+<!----------------------about------------------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="IMG/my photo.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <P>HEY,I'M ALTAMASH KAMAL</P> <br>
+                <p>MOTIVATED MERN DEVELOPER WITH A COMPUTER SCIENCE DEGREE. PROFICIENT IN HTML5, CSS,
+                    JAVASCRIPT, AND REACTJS AND NODEJS. DEVELOPED MANY RESPONSIVE WEB APPS, SKILLED IN GIT AND
+                    GITHUB AND COMMITTED TO CONTINUOUS LEARNING.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>GRAPHIC DESIGNER</span><br>Designing Web/App interfaces</li>
+                        <li><span>WEB DEVELOPER</span><br>Web app Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024-current</span><br>INTERN AT CODERS CAVE AS A WEB DEVELOPER<li>
+                        <li><span>2024</span><br>INTERN AT BHARATINTERN AS A FULL-STACK
+                            DEVELOPER. </li>
+                        <li><span>2023</span><br>INTERNSHIP FROM COINCENT IN ARTIFICIAL INTELLIGENCE BY PYTHON</li>
+                       
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021 - Current</span><br>Bachelor of Technology (Computer Science Engineering at Integral University</li>
+                        <li><span>2021</span><br>Intermediate from Saiyyed Hamid Senior Secondary School (+2)(AMU)</li>
+                        <li><span>2018</span><br>High School from City School (AMU)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------------------------Projects------------------------------------->
+<div id="project">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="project-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Content Management Tool</h2>
+                <p>Content Management Tool using HTML,CSS,Javascript</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+            <i class="fa-solid fa-calculator"></i>
+            <h2>Calculator Webpage</h2>
+            <p>Basic Calculator using HTML,CSS</p>
+            <a href="#">Learn more</a>
+        </div>
+        <div>
+            <i class="fa-solid fa-calculator"></i>
+            <h2>Landing Page</h2>
+            <p>Landing Page using HTML,CSS</p>
+            <a href="#">Learn more</a>
+        </div>
+        <div>
+            <i class="fas fa-code"></i>
+            <h2>Spotify Clone</h2>
+            <p>Spotify Clone using HTML,CSS,Javascript</p>
+            <a href="#">Learn more</a>
+        </div>
+    </div>
+</div>
+
+<!---------------------------Projects---------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="IMG/content management tool.png">
+                <div class="layer">
+                    <h3>Content Management Tool</h3>
+                    <p>Content Management Tool using HTML,CSS &Javascript</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="IMG/calculator.png">
+                    <div class="layer">
+                    <h3>Calculator webpage</h3>
+                    <p>Calculator webpage using HTML,CSS and Javascript.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="IMG/landing page.png">
+                <div class="layer">
+                    <h3>Travelling (Landing Page)</h3>
+                    <p>Landing Page using HTML,CSS </p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="IMG/spotify.png">
+                <div class="layer">
+                    <h3>Spotify Clone</h3>
+                    <p>Spotify Clone using HTML,CSS and Javascript</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script> 
+</body>
+</html>
